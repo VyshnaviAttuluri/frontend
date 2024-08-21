@@ -1,0 +1,191 @@
+/* Container for the entire page */
+.homepage-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+  }
+  
+  /* Navigation Bar Styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1089D3;
+    padding: 25px 30px; /* Adjusted padding */
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Stretch to full width */
+    position: fixed; /* Fix to the top */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .navbar .logo img {
+    height: 50px;
+    width: auto;
+  }
+  
+  .navbar .web-name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-buttons {
+    display: flex;
+    gap: 10px; /* Add space between buttons */
+  }
+  
+  .navbar .nav-buttons button {
+    background-color: white;
+    color: #1089D3;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+  }
+  
+  .navbar .nav-buttons button:hover {
+    background-color: #1089D3;
+    color: white;
+  }
+  
+  /* Search Section Styling */
+  .search-section {
+    display: flex;
+    justify-content: center;
+    margin: 120px 0 40px; /* Increased margin-top for space below the navbar */
+  }
+  
+  .search-section input {
+    padding: 15px 20px;
+    width: 400px;
+    border-radius: 25px 0 0 25px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .search-section .search-button {
+    padding: 15px 25px;
+    border-radius: 0 25px 25px 0;
+    border: none;
+    background-color: #1089D3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .search-section .search-button:hover {
+    background-color: #0b6ba6;
+  }
+  
+  /* Emergency Button Styling */
+  .emergency-section {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .emergency-button {
+    background-color: #c75555;
+    color: white;
+    padding: 20px 40px;
+    font-size: 24px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px rgba(194, 72, 72, 0.4);
+    transition: transform 0.2s;
+  }
+  
+  .emergency-button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Results Container and Alternating Rows */
+  .results-container {
+    margin-top: 20px;
+    overflow-y: auto; /* Allow scrolling for results */
+    max-height: 400px; /* Limit height to avoid overflow */
+  }
+  
+  .information-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .information-item {
+    margin-bottom: 8px;
+  }
+  
+  .information-item span {
+    font-weight: bold;
+  }
+  
+  /* Alternate row styling */
+  .results-container li:nth-child(odd) .information-container {
+    background-color: white;
+  }
+  
+  .results-container li:nth-child(even) .information-container {
+    background: linear-gradient(45deg, #1089D3 0%, #12B1D1 100%);
+    transform: scale(0.95);
+    box-shadow: rgba(133, 189, 215, 0.88) 0px 15px 10px -10px;
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background-color: #333; /* Darker background for contrast */
+    color: white;
+    padding:  20px 200px 20px 300px; 
+    margin-top: auto;
+    text-align: center;
+    width: 100%; /* Stretch to full width */
+  }
+  
+  .footer .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .footer .footer-content h3 {
+    margin-bottom: 15px;
+    font-size: 28px;
+  }
+  
+  .footer .footer-content p {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar .nav-buttons {
+      flex-direction: column;
+      width: 100%;
+      align-items: flex-start;
+      gap: 5px;
+    }
+  
+    .search-section input {
+      width: 80%;
+    }
+  
+    .emergency-button {
+      width: 90%;
+      font-size: 20px;
+    }
+  }
+  

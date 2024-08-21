@@ -1,0 +1,162 @@
+/* hform.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll; /* Ensure the page scrolls properly */
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box; /* Ensure padding and borders are included in the width and height */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+#hospital-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: calc(100vh - 120px); /* Adjust height to make sure it's within the viewport */
+    overflow-y: auto; /* Enable vertical scrolling within the form if content overflows */
+}
+
+#hospital-form h2 {
+    color: #007BFF;
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+}
+
+form fieldset {
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+form fieldset legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #007BFF;
+    font-size: 1.2em;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="tel"],
+form input[type="email"],
+form input[type="url"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #007BFF;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="tel"]:focus,
+form input[type="email"]:focus,
+form input[type="url"]:focus,
+form input[type="date"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button[type="submit"],
+button[type="button"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-right: 10px;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="submit"]:active,
+button[type="button"]:active {
+    transform: translateY(2px);
+}
+
+button[type="button"] {
+    background-color: #6c757d;
+}
+
+button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+button[type="button"]:active {
+    transform: translateY(2px);
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    #hospital-form {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    #hospital-form h2 {
+        font-size: 1.5em;
+    }
+
+    form label {
+        margin-bottom: 6px;
+    }
+}
