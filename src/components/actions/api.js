@@ -1,1 +1,1 @@
-export const api="https://backendnip.onrender.com";
+export const api="https://nationalinfoportal.onrender.com";
