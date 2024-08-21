@@ -10,7 +10,7 @@ export const Signin = () => {
 
     const handleSignIn = async () => {
         try {
-            const res = await axios.post("https://niport.onrender.com/", { email, password });
+            const res = await axios.post("https://niport.onrender.com/signin", { email, password });
             if (res.data.message) {
                 alert("Login successful");
                 // Navigate to dashboard or home
