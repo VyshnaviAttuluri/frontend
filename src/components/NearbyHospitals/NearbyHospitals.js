@@ -11,7 +11,7 @@ const NearbyHospitals = () => {
                 const { latitude, longitude } = position.coords;
 
                 try {
-                    const response = await axios.post('http://localhost:9000/nearby-hospitals', {
+                    const response = await axios.post('https://niport.onrender.com/nearby-hospitals', {
                         latitude,
                         longitude,
                         radius: 10 // Radius in miles

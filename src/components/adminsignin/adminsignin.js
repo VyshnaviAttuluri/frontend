@@ -11,7 +11,7 @@ const AdminSignin = () => {
 
     const handleAdminSignIn = async () => {
         try {
-            const res = await axios.post("http://localhost:9000/admin-signin", { username, password });
+            const res = await axios.post("https://niport.onrender.com/admin-signin", { username, password });
             if (res.data.message) {
                 alert("Admin login successful");
                 // Navigate to admin dashboard or home

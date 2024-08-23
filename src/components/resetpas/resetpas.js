@@ -17,7 +17,7 @@ export const Resetpas = () => {
         }
 
         try {
-            const response = await axios.post("http://localhost:9000/reset-password", { email, newPassword });
+            const response = await axios.post("https://niport.onrender.com/reset-password", { email, newPassword });
             if (response.data.success) {
                 alert("Password updated successfully");
                 nav('/signin');

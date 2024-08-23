@@ -13,7 +13,7 @@ const SignupForm = () => {
     e.preventDefault();
     if (password === confirmPassword) {
       try {
-        const details = await axios.post("http://localhost:9000/signup", { email, password });
+        const details = await axios.post("https://niport.onrender.com/signup", { email, password });
         if (details.data.success) {
           alert("Signup successful");
           nav('/signin');

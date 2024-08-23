@@ -11,7 +11,7 @@ const HomePage = () => {
     const handleSearch = async () => {
         if (searchQuery.trim()) {
             try {
-                const response = await fetch('http://localhost:9000/searchpage', {
+                const response = await fetch('https://niport.onrender.com/searchpage', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

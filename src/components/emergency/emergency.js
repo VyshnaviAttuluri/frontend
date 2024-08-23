@@ -8,7 +8,7 @@ export const Emergencypage = () => {
     useEffect(() => {
         const fetchEmergencyData = async () => {
             try {
-                const response = await axios.post("http://localhost:9000/emergencypage")
+                const response = await axios.post("https://niport.onrender.com/emergencypage")
                 if (response.data.result) {
                     console.log(response.data.result);
                     setResults(response.data.result);

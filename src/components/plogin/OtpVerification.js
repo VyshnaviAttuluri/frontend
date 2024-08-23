@@ -13,7 +13,7 @@ const OtpVerification = () => {
 
     const sendOtp = async () => {
         try {
-            const response = await axios.post('http://localhost:9000/send-otp', { email });
+            const response = await axios.post('https://niport.onrender.com/send-otp', { email });
             if (response.data) {
                 setIsOtpSent(true);
                 setError('');

@@ -9,7 +9,7 @@ const AppointmentBooking = ({ hospitalId }) => {
 
     const handleBookAppointment = async () => {
         try {
-            const response = await axios.post('http://localhost:9000/book-appointment', {
+            const response = await axios.post('https://niport.onrender.com/book-appointment', {
                 hospitalId,
                 userId: 'user_id_placeholder', // Replace with actual user ID
                 doctorName,

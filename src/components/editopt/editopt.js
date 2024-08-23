@@ -38,7 +38,7 @@ function Editopt() {
     useEffect(() => {
         if (id) {
             // Fetch existing data for the hospital and set it to the form data
-            axios.get(`http://localhost:9000/hospital/${id}`)
+            axios.get(`https://niport.onrender.com/hospital/${id}`)
                 .then(response => {
                     setFormData(response.data);
                     setIsEditing(true);
